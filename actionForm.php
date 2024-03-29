@@ -3,7 +3,7 @@ session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
-$db = "std_dbms";
+$db = "rifnozecl_std_dbms";
 error_reporting();
 // Create connection
 $conn = new mysqli($servername, $username, $password,$db);
