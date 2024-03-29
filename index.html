@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <title>
+        index
+    </title>
+</head>
+
+<!--HTMLCSS/Style.CSS-->
+<style type="text/css">
+    .H_M {
+        margin: 25px;
+        height: 40px;
+        width: auto;
+        margin: center;
+    }
+    
+    .header {
+        background: rgba(0, 0, 100, 0.4);
+        height: auto;
+        width: auto;
+    }
+    
+    .video-background {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -1;
+    }
+    .url {
+        color: black;
+        font-size: 25px;
+        text-decoration: none;
+    }
+    
+</style>
+
+<body>
+<!--Background_video-->
+    <section class="header">
+        <video autoplay loop class="video-background" muted plays-inline>
+            <source src="img/H-M.mp4"type="video/mp4">
+        </video>
+    </section>
+
+
+
+<!--Table.1-->
+    <table width=border="2" align="center" bordercolor="green" bgcolor="yellow" style="border-radius:12px" height="auto" section class="header">
+        <tr>
+            <td>
+                <center>
+                    <h2>
+                        <center>
+                            <h1 style="color: white;">Welcome to <!--<span style="background-color: #4485b8; color: yellowgreen; padding: 0 5px;">--> Student Database Managment <!--</span>--> System <span style="color: #ffeb99";> (STDMS) </span> </h1>
+                        </center>
+                    </h2>
+                </center>
+            </td>
+        </tr>
+    </table>
+
+<!--Table.2-->
+    <table width="90%" height="50" align="center" bordercolor="gray" bgcolor="black" textcolor="white" style=border:radiu 12px;>
+        <tr>
+            
+                <td align="center" bgcolor="#CCCCCC" width="25%" ><a href="./"  class="url"> Home</a></td>
+				<td align="center" bgcolor="#CCCCCC" width="25%" ><a target="mainData" href="login form.html"  class="url"> Apply Online</a></td>
+                <td align="center" bgcolor="#CCCCCC" width="25%"><a target="mainData" href="show.php"  class="url"> View Records</a></td>
+                <!--<td align="center" bgcolor="#CCCCCC" width="25%"> <a href="log.php">search</a> </td>-->
+                <td align="center" bgcolor="#CCCCCC" width="25%"><a  target="mainData" href="About us.html"  class="url"> About us </a></td><br>
+            
+        </tr>
+    </table><br>
+	<!--I Fram Tags-->
+    <center>
+		<iframe width="90%" height="70%" id="mainData" style="border: none;" name="mainData" src="searchForm.html"></iframe>
+    </center>
+
+
+</body>
+
+
+
+</html>

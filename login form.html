@@ -1,0 +1,306 @@
+<!--HTML Tag Open-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Form</title>
+    <!--Style Tag Open-->
+    <style>
+        div.a {
+            padding-left: 350px;
+        }
+    </style>
+    <!--javascript Tag Open-->
+    <script language="javascript">
+        function Submit() {
+            var UserName = document.form.Name.value;
+            var FatherName = document.form.Fathername.value;
+            var Email = document.form.Email.value;
+            var phone = document.form.Phone.value;
+            var Address = document.form.Address.value;
+            var Age = document.form.Age.value;
+            var Class = document.form.Class.value;
+            var Gender = document.form.Gender.value;
+
+
+            if (UserName == "") {
+                document.form.UserName.focus();
+                document.getElementById("msg").innerHTML = "Name is Required";
+                return false;
+            }
+
+            if (UserName.length < 5) {
+                document.form.UserName.focus();
+                document.getElementById("msg").innerHTML = "Please set more than 1 letter more";
+                return false;
+            }
+
+            if (FatherName == "") {
+                document.form.FatherName.focus();
+                document.getElementById("msg").innerHTML = "Father Name is Required";
+                return false;
+            }
+            if (Email == "") {
+                document.form.Email.focus();
+                document.getElementById("msg").innerHTML = "Email is Required";
+                return false;
+            }
+            if (phone == "") {
+                document.form.Phone.focus();
+                document.getElementById("msg").innerHTML = "Phone No. is Required";
+                return false;
+            }
+            if (Address == "") {
+                document.form.Address.focus();
+                document.getElementsById("msg").innerHTML = "Address is Required";
+                return false;
+            }
+            if (Age == "") {
+                document.form.Age.focus();
+                document.getElementsById("msg").innerHTML = "Age is Required"
+                return false;
+            }
+            if (Class == "") {
+                document.form.Class.focus();
+                document.getElementsById("msg").innerHTML = "Class is Required"
+                return false;
+            }
+        }
+    </script>
+    <!--HTMLCSS/Style.CSS Open-->
+    <style type="text/css">
+        .form1 {
+            align-items: center;
+            align: center;
+        }
+        
+        .input {
+            width: 320px;
+            height: 25px;
+            border-radius: 7px;
+            font-size: 20px;
+            font-family: inherit;
+        }
+        
+        .font_design {
+            font-size: 25px;
+            font-family: -webkit-pictograph;
+        }
+        
+        .video-background {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+        }
+        
+        @media (min-aspect-ratio:16/9) {
+            .video-background {
+                width: 100;
+                height: auto;
+            }
+        }
+        
+        @media (max-aspect-ratio:16/9) {
+            .video-background {
+                width: auto;
+                height: 100%;
+            }
+        }
+        
+        .logo {
+            margin: 25px;
+            height: 40px;
+        }
+        
+        .input-type {
+            background-origin: padding-box;
+            border-radius: 10px;
+        }
+        
+        .phone {
+            background-origin: padding-box;
+            border-radius: 7px;
+        }
+        
+        .my-button {
+            width: 130px;
+            height: 30px;
+            font-family: lato;
+            background-color: greenyellow;
+            color: red;
+            text-align: center;
+            font-size: 20px;
+            border-radius: 0px 30px
+        }
+        
+        .my-button:hover {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<!--Body Tag Open-->
+
+<body>
+    <!--Background Video tags Open-->
+    <!--
+    <section class="header">
+        <video autoplay loop class="video-background" muted plays-inline>
+            <source src="img/H-M.mp4" type="video/mp4" width="1000" height="auto">
+        </video>
+    </section>
+    -->
+    <!--Background Video tags Close-->
+    <!--Table.1 OPen-->
+    <!--
+    <table width=border="2" align="center" bordercolor="#0000FF" bgcolor="white-green" style="border-radius:12px" "752"
+        height="142">
+        <tr>
+            <td width="150" height="134">
+                <marquee bgcolor="" behavior="alternate" direction="left_right" scrollamount="8px"><img
+                        src="img/logo.png" style="width:120px; height:100px;"> </marquee>
+            </td>
+            <td width="647">
+                <h1><b>
+                        <center> <span style="background-color: #0de64e; color: rgb(211, 24, 24); padding: 0 5px;">
+                                Registeration Form </span></center>
+                </h1></b>
+            </td>
+        </tr>
+    </table>
+    -->
+    <!--Table.1 Close-->
+    <!--Div Tags-->
+    <div id="msg" class="form1"></div>
+    <div class="form1">
+        <!--Form Tag-->
+        <form name="form" action="actionForm.php" method="post">
+            <!--Table.2 Open-->
+            <table class="font_design" align="center" bordercolor="pink" bgcolor="gray" style="border-radius:12px" height="100%" width="">
+                <tr>
+                    <td>
+                        Name
+                    </td>
+                    <td>
+                        <input id="textusername" type="text" name="UserName" required value "" class="input" required placeholder="Type Name" />
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        Father Name
+                    </td>
+                    <td>
+                        <input id="textfathername" type="text" name="FatherName" required value "" class="input" required placeholder="Type Father Name" />
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        Email
+                    </td>
+                    <td>
+                        <input id="textemail" type="email" name="Email" required value "" class="input" required placeholder="Type Email" />
+                    </td>
+
+                </tr>
+                </tr>
+
+                <tr>
+                    <td>
+                        Phone No.
+                    </td>
+                    <td>
+                        <select name="PhoneCode" required class="phone" required>
+                            <option selected hidden value="">Select Code</option>
+                            <option value="92">92</option>
+                            <option value="91">91</option>
+                            <option value="001">001</option>
+                        </select>
+                        <input type="phone" name="Phone" class="phone" required placeholder="Type Phone">
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        Addres
+                    </td>
+                    <td>
+                        <input id="text" type="text" name="Address" required value "" class="input" required placeholder="Type Address">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Age
+                    </td>
+                    <td>
+                        <input id="text" type="text" name="Age" required value "" class="input" required placeholder="Type Age">
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        Class
+                    </td>
+                    <td>
+                        <select name="Class" required class="input" required>
+                            <option selected hidden value="">Select Class</option>
+                            <option>One</option>
+                            <option>Two</option>
+                            <option>Three</option>
+                            <option>Four</option>
+                            <option>Five</option>
+                            <option>Six</option>
+                            <option>Seven</option>
+                            <option>Eight</option>
+                            <option>Nine</option>
+                            <option>Ten</option>
+                            <option>Eleven</option>
+                            <OPTION>Twelve</OPTION>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Gender
+                    </td>
+                    <td>
+                        <input type="radio" name="Gender" value="Male" required>Male</input>
+                        <input type="radio" name="Gender" value="Female" required>Female</input>
+                    </td>
+                </tr>
+                <!--Submit Button-->
+                <tr>
+                    <td>
+                        <!--
+                        <a href="./" class="botton"> Home</a>
+                        -->
+                    </td>
+                    <td>
+                        &nbsp;&nbsp;&nbsp;
+                        <input type="submit" value="submit" class="my-button">
+                    </td>
+
+
+                </tr>
+                <!--Table.2 Close-->
+            </table><br>
+        </form>
+    </div>
+    </section>
+    <!--Body Tag Close-->
+</body>
+
+</html>
+<!--PHP Open-->
+<?php
+        if($-GET{'submit'})
+        {
+            $ID = $-GET{'User Name'}
+        }
+    ?>
+    <!--PHP Close-->
